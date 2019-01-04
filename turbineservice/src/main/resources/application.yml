@@ -1,0 +1,17 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+server:
+    port: 8893
+spring:
+    application:
+        name: turbine-service
+turbine:
+    #配置要监控的 服务id
+    appConfig: service-feign, service-ribbon
+    #优先等级 default
+    aggregator:
+        clusterConfig: default
+      #
+    clusterNameExpression: new String("default")

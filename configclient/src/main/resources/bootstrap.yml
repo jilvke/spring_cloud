@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: client-1
+  cloud:
+    config:
+      label: master
+      profile: dev
+  #    uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        serviceId: config-server
+## 刷新时，关闭安全验证
+management:
+  security:
+    enabled: false
+
